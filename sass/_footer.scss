@@ -1,0 +1,263 @@
+footer {
+  background: $footer-color;
+  padding: 56px 0 40px 0;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: $breakpoint-desktop) {
+    padding: 56px 8px 40px 8px;
+  }
+
+  a {
+    color: $main-bg-color;
+
+    &:hover {
+      color: $brand-color;
+    }
+  }
+
+  .footer-logo {
+    width: 190.77px;
+    height: 19.69px;
+  }
+
+  hr {
+    width: 100%;
+    height: 1px;
+    background: $main-bg-color;
+    mix-blend-mode: normal;
+    opacity: 0.4;
+    margin-top: 40.31px;
+    margin-bottom: 32px;
+  }
+
+  .info-links {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $breakpoint-tablet) {
+      flex-direction: column;
+
+      .social {
+        margin-bottom: 40.8px;
+      }
+    }
+
+    form {
+      display: flex;
+
+      .nice-select {
+        //JQuery
+        background: #3b3b3b;
+        border-radius: 0 2px 2px 0;
+        width: 179.28px;
+        height: 40px;
+        color: $main-bg-color;
+        border: none;
+        line-height: 40px;
+
+        &:focus {
+          outline: none;
+        }
+
+        .current {
+          //JQuery
+          color: $main-bg-color;
+          font-size: 13px;
+        }
+
+        .list {
+          //JQuery
+          background: #3b3b3b;
+          color: $main-bg-color;
+          width: 227px;
+          margin: 0;
+          border-radius: 0;
+          left: -47px;
+
+          .option {
+            //JQuery
+            font-size: 13px;
+            line-height: 46px;
+            padding-left: 67px;
+            @include transition(0.2s);
+
+            &:hover {
+              background: $brand-color;
+            }
+          }
+
+          .selected {
+            //JQuery
+            background: $brand-color;
+          }
+        }
+      }
+
+      #world {
+        background: #3b3b3b;
+        border-radius: 2px 0 0 2px;
+        width: 47.72px;
+        height: 40px;
+        color: $main-bg-color;
+        position: relative;
+
+        img {
+          width: 15.72px;
+          height: 15.72px;
+          position: absolute;
+          top: 12.14px;
+          left: 16px;
+        }
+      }
+    }
+
+    span {
+      font-size: 16px;
+      line-height: 19px;
+      color: $hover-color;
+    }
+
+    .logo-name {
+      font-size: 16px;
+      line-height: 19px;
+      color: $main-bg-color;
+      margin-top: 32px;
+      margin-bottom: 20.8px;
+    }
+
+    a {
+      font-size: 13px;
+      line-height: 15px;
+      margin-bottom: 23px;
+    }
+
+    .social-media {
+      margin-bottom: 60.8px;
+
+      a {
+        margin-right: 20.15px;
+
+        img {
+          width: 16.4px;
+          height: 16.4px;
+          @include transition(0.3s);
+
+          &:hover {
+            @include transform(scale(1.7));
+          }
+        }
+      }
+    }
+  }
+
+  .applications {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+
+    @media (max-width: $breakpoint-tablet) {
+      margin: 0 auto;
+      justify-content: center;
+    }
+
+    > a {
+      margin-right: 20.61px;
+      margin-left: 20.61px;
+      @include transition(0.5s);
+
+      &:hover {
+        @include transform(scale(1.1));
+      }
+
+      #appStore {
+        width: 118.9px;
+        height: 39.25px;
+        background-image: url(../images/Vector.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        @media (max-width: $breakpoint-tablet) {
+          width: 108.6px;
+          height: 36px;
+        }
+      }
+
+      #googlePlay {
+        width: 135px;
+        height: 40px;
+        background-image: url(../images/google.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        @media (max-width: $breakpoint-tablet) {
+          width: 124px;
+          height: 36px;
+        }
+      }
+    }
+  }
+
+  .privacy {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $breakpoint-tablet) {
+      flex-direction: column;
+      padding-bottom: 24px;
+    }
+
+    a {
+      font-size: 11px;
+
+      @media (max-width: $breakpoint-tablet) {
+        padding-bottom: 24px;
+      }
+    }
+
+    .copyright {
+      font-size: 11px;
+      color: $main-bg-color;
+
+      @media (max-width: $breakpoint-tablet) {
+        padding-bottom: 24px;
+      }
+    }
+  }
+
+  .scrollup-button {
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    background: $brand-color;
+    border-radius: $radius;
+    right: 16px;
+    bottom: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    @include transition(all 0.4s);
+
+    &.show {
+      opacity: 1;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: $hover-color;
+    }
+
+    img {
+      width: 15.27px;
+      height: 24.99px;
+    }
+  }
+
+  .date {
+    color: $main-bg-color;
+    margin-top: 40px;
+    font-size: 16px;
+    text-align: center;
+  }
+}

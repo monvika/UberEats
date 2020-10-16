@@ -1,0 +1,58 @@
+header {
+  box-shadow: 0px 0px 16px $shadow-color;
+  height: $header-height;
+}
+
+.header-section {
+  height: $header-height;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  @media (max-width: $breakpoint-desktop) {
+    padding: 0 8px;
+  }
+
+  .logo {
+    width: $logo-width;
+    height: $logo-height;
+  }
+
+  button {
+    width: $button-width;
+    height: $button-height;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 24px;
+    background: $main-bg-color;
+    color: $main-font-color;
+    border: 1px solid $border-color;
+    border-radius: $radius;
+    align-self: center;
+    position: absolute;
+    right: 64px;
+
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0px 0px 6px $shadow-color;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+      right: 16px;
+    }
+  }
+
+  #basket {
+    display: flex;
+    width: $basket-width;
+    height: $basket-height;
+    object-fit: contain;
+    position: absolute;
+    right: 18.05px;
+    align-self: center;
+
+    @media (max-width: $breakpoint-tablet) {
+      display: none;
+    }
+  }
+}
